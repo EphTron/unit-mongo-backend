@@ -48,8 +48,6 @@ async def backend(websocket, path):
             json_user = {"username": user.name, "ip":user.ip}
             await websocket.send(json.dumps(json_user))
     elif json_dict["command"] == "echo":
-        user = users[json_dict["username"]]
-        print("user" + user.name)
         message = json_dict["message"]
         await websocket.send(json.dumps(message))
     else:
