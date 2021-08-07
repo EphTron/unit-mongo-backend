@@ -26,7 +26,7 @@ async def haggle():
         #answer = await websocket.recv()
 
         #print(answer)
-        json_command2 = '{"command":"echo", "username":"ephra", "key":"test"}'
+        json_command2 = '{"command":"echo", "username":"ephra", "message":"test"}'
         await websocket.send(json_command2)
 
         greeting = await websocket.recv()
